@@ -4,12 +4,14 @@ import com.ym.repository.iPersonaRepo;
 import com.ym.repository.personaRepoImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service // Exteriotipo Indica que es logica de negocios.
 public class iPersonaServiceImpl implements iPersonaService{
 	
 	@Autowired
+	@Qualifier("persona2")// Esto es util cuando necesitamos realizar alguna otra implemntación
 	private iPersonaRepo repo;
 
 	@Override
